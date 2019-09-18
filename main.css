@@ -1,7 +1,33 @@
-p{
-	color:blue;
-	font-size: 40px;
+h1 {
+  font-family: "Courier New", Monospace, serif;
+  color: #222059;
+  text-align: center;
+  letter-spacing: 40px;
+  text-shadow: 3px 3px #c9244b;
+  font-size: 50px;
+}
 
+h2 {
+  font-family: "Courier New", Monospace, serif;
+  color: #222059;
+  padding:10px;
+  text-align: center;
+  letter-spacing: 40px;
+  text-shadow: 3px 3px #c9244b;
+  font-size:30px;
+}
 
-
+#hi { background-color: #edbbbb;
+font-size: 25px;
+color: #5e3d3d;
+}
+p {
+  color:white;
+  font-size: 20px;
+}
+  #introduction {
+  background-color: #51cfb4;
+}
+h2 {
+  color: pink;
 }
