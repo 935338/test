@@ -17,6 +17,10 @@ h2 {
   font-size:30px;
 }
 
+#HH3 {
+  font-size: 30px;
+}
+
 #hi { background-color: #edbbbb;
 font-size: 25px;
 color: #5e3d3d;
@@ -55,4 +59,9 @@ li a {
 /* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: #111;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-color: white;
 }
