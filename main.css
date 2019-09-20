@@ -1,9 +1,9 @@
 h1 {
   font-family: "Courier New", Monospace, serif;
-  color: #222059;
+  color: #222809;
   text-align: center;
   letter-spacing: 40px;
-  text-shadow: 3px 3px #c9244b;
+  text-shadow: 3.5px 3px #a9249b;
   font-size: 50px;
 }
 
@@ -15,6 +15,10 @@ h2 {
   letter-spacing: 40px;
   text-shadow: 3px 3px #c9244b;
   font-size:30px;
+}
+
+#HH3 {
+  font-size: 30px;
 }
 
 #hi { background-color: #edbbbb;
@@ -55,4 +59,9 @@ li a {
 /* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: #111;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-color: white;
 }
