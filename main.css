@@ -62,6 +62,16 @@ li a:hover {
 }
 
 table, th, td {
-  border: 1px solid black;
-  border-color: white;
+  border: 3px solid black;
+  border-color: purple;
+  padding: 5px;
 }
+
+table {
+  padding: 10px;
+  border-color: black;
+}
+#myCourses {
+  background-color: #a7c9bc
+}
+
