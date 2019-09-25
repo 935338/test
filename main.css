@@ -79,28 +79,32 @@ img {
 .button {
   display: inline-block;
   padding: 15px 25px;
-  font-size: 40px;
+  font-size: 20px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: #fff;
-  background-color: #4CAF50;
+  color: blue;
+  background-color: #5E4FA1;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
 }
 
-.button:hover {background-color: #3e8e41}
+.button:hover {background-color: #45b2ea}
 
 .button:active {
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+#button{
+  text-align: center;
+}
+
 table,th, td {
   border: 3px solid black;
-  border-color: purple;
+  border-color: #5E4FA1;
   padding: 5px;
 }
 
