@@ -1,4 +1,5 @@
 
+
 function triangle() {
 
 	var a1 = parseInt(prompt("Enter the frist angle"));
@@ -21,7 +22,7 @@ function triangle() {
 
 function year() {
 	var inputYear = parseInt(prompt("Enter the year"));
-	if(type(inputYear)== int ) {
+	if(inputYear>0 ) {
 		var century = Math.ceil(inputYear/100);
 		alert("the century of" + " " + inputYear+ " " + "is" + " " + century);
 	}
@@ -31,4 +32,16 @@ function year() {
 }
 
 
+function tenfour() {
+	for (i=0;i<=100;i++) {
+		if (i%4==0){
+			console.log("four");
+		}
+		elseif {
 
+		}
+		else{
+			console.log(i);
+		}
+	}
+}
