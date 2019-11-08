@@ -51,3 +51,23 @@ function tenfour() {
 		}
 	}
 }
+
+function login() {
+	let userName = prompt("enter username")
+	let password = prompt("enter password")
+	if (userName.toLowerCase() == "shivani" && password=="123") {
+		alert("true")
+	}
+	else {
+		alert("false")
+	}
+}
+
+function altCaps() {
+	let string_input = prompt("what's your favourite sentence?")
+	for (let i=0; i<string_input.length;i+=2) {
+		let x = i+1
+		console.log(string_input[i].toUpperCase());
+		console.log(string_input[x].toLowerCase());
+	}
+}
