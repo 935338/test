@@ -65,9 +65,16 @@ function login() {
 
 function altCaps() {
 	let string_input = prompt("what's your favourite sentence?")
+	let string_output = ""
 	for (let i=0; i<string_input.length;i+=2) {
 		let x = i+1
-		console.log(string_input[i].toUpperCase());
-		console.log(string_input[x].toLowerCase());
+	string_output += string_input[i].toUpperCase();
+	string_output += string_input[x].toLowerCase();
 	}
+	console.log(string_output);
+}
+
+function len() {
+	let stringInput = prompt("enter a word")
+	console.log(stringInput.length);
 }
