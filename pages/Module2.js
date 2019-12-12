@@ -78,3 +78,19 @@ function len() {
 	let stringInput = prompt("enter a word")
 	console.log(stringInput.length);
 }
+	
+function code() {
+	let str = prompt('Enter a sentence to code')
+  	var li = str.split(' ')
+ 	 var arr = new Array()
+ 	 for (var i = 0; i < li.length; i++) {
+   		 if (li[i] == '?' || li[i] =='!'){
+    		arr.push(li[i])
+    	}
+    	else {
+   			 var a = li[i].slice(0,1)
+    		arr.push(li[i].substr(1)+a+'ay')
+   		 }
+  }
+console.log(arr.join(' '))
+}
