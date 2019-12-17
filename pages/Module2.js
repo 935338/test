@@ -80,17 +80,23 @@ function len() {
 }
 	
 function code() {
-	let str = prompt('Enter a sentence to code')
-  	var li = str.split(' ')
- 	 var arr = new Array()
- 	 for (var i = 0; i < li.length; i++) {
-   		 if (li[i] == '?' || li[i] =='!'){
-    		arr.push(li[i])
-    	}
-    	else {
-   			 var a = li[i].slice(0,1)
-    		arr.push(li[i].substr(1)+a+'ay')
-   		 }
+	var key = prompt('Enter a key that your friend knows. It cannot have repealting alphabets').split('');
+	var li = prompt('Enter a sentence to code').split('');
+  	var rows = li.length/key.length;
+ 	console.log(rows);
+ 	console.log(li);
+ 	console.log(key);	
+ 	var arr = new Array()
+
+ 	for (var i = 0; i < li.length; i++) {
+
+		if (i<key.length) {
+			arr.push(li[i]);
+			console.log(arr)
+		}	
+		else {
+			arr
+		}
   }
 console.log(arr.join(' '))
 }
