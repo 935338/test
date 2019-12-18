@@ -82,6 +82,7 @@ function len() {
 function code(plain, key) {
 	var plain = prompt('enter a word/ sentence to code')
 	var key = prompt('Enter a Keyword')
+	//I add a condition in case the person enters a null value
 	if (plain != null && key != null ) {
 		var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.!?,:;'/ ";
 		var final = '';
