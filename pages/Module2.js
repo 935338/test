@@ -79,24 +79,40 @@ function len() {
 	console.log(stringInput.length);
 }
 	
-function code() {
-	var key = prompt('Enter a key that your friend knows. It cannot have repealting alphabets').split('');
+/*function code() {
+	var key =  "KITE".split('');
 	var li = prompt('Enter a sentence to code').split('');
-  	var rows = li.length/key.length;
+  	var rows = Math.ceil(li.length/key.length);
  	console.log(rows);
  	console.log(li);
  	console.log(key);	
- 	var arr = new Array()
+	var K = [];
+	var I = [];
+	var T = [];
+	var E = [];
 
- 	for (var i = 0; i < li.length; i++) {
+	for (var c = 0; c < key.length; c++) {}
+		var key[c] = []   	
 
-		if (i<key.length) {
-			arr.push(li[i]);
-			console.log(arr)
-		}	
-		else {
-			arr
-		}
-  }
-console.log(arr.join(' '))
+ }
+console.log(matrix.join(' '))
+}*/
+function code(word, keyword) {
+	var word = prompt('enter a word')
+	var keyword = prompt('Enter a Keyword')
+	var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.!?,:;'/ ";
+	var encryptWord = "";
+	for (var i = 0; i < word.length; i++) {
+		encryptWord += alphabet.charAt((alphabet.indexOf(word.charAt(i)) + alphabet.indexOf(keyword.charAt(i % keyword.length))) % alphabet.length);
+	}
+	console.log(encryptWord);
+}
+
+function decode(word, keyword) {
+	var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.!?,:;'/ ";
+	var decryptWord = "";
+	for (var i = 0; i < word.length; i++) {
+		decryptWord += alphabet.charAt(((alphabet.indexOf(word.charAt(i)) + alphabet.length) - alphabet.indexOf(keyword.charAt(i % keyword.length))) % alphabet.length);
+	}
+	return decryptWord;
 }
