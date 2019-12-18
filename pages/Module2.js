@@ -83,7 +83,7 @@ function code(plain, key) {
 	var plain = prompt('enter a word/ sentence to code')
 	var key = prompt('Enter a Keyword')
 	//I add a condition in case the person enters a null value
-	if (plain != null && key != null ) {
+	if (plain !== ' ' && key !== ' ' ) {
 		var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.!?,:;'/ ";
 		var final = '';
 		for (var i = 0; i < plain.length; i++) {
@@ -101,7 +101,7 @@ function code(plain, key) {
 function decode(plain, key) {
 	var plain = prompt('Enter the coded message')
 	var key = prompt('What is the secret key?')
-	if (plain != null && key != null ) {
+	if (plain !== ' ' && key !== ' ' ) {
 		var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.!?,:;'/ ";
 		var initial = "";
 		for (var i = 0; i < plain.length; i++) {
