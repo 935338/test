@@ -113,7 +113,12 @@ function decode(plain, key) {
 		console.log(initial);
 	}
 	else {
-		alert('please enter your key and coded message again');
+		alert('please do not enter a null value');
 	}
 }
-
+/*Title: <Vegenere Cipher Implementation>
+Author: <https://www.geeksforgeeks.org/vigenere-cipher/>
+Date: <12-18-19>
+Code version: <Java and C#>
+Availability: <https://www.geeksforgeeks.org/vigenere-cipher/>
+This was used for reference for functions code and decode */
