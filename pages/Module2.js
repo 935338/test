@@ -78,41 +78,41 @@ function len() {
 	let stringInput = prompt("enter a word")
 	console.log(stringInput.length);
 }
-	
-/*function code() {
-	var key =  "KITE".split('');
-	var li = prompt('Enter a sentence to code').split('');
-  	var rows = Math.ceil(li.length/key.length);
- 	console.log(rows);
- 	console.log(li);
- 	console.log(key);	
-	var K = [];
-	var I = [];
-	var T = [];
-	var E = [];
-
-	for (var c = 0; c < key.length; c++) {}
-		var key[c] = []   	
-
- }
-console.log(matrix.join(' '))
-}*/
-function code(word, keyword) {
-	var word = prompt('enter a word')
-	var keyword = prompt('Enter a Keyword')
-	var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.!?,:;'/ ";
-	var encryptWord = "";
-	for (var i = 0; i < word.length; i++) {
-		encryptWord += alphabet.charAt((alphabet.indexOf(word.charAt(i)) + alphabet.indexOf(keyword.charAt(i % keyword.length))) % alphabet.length);
+//vegenere cipher- the reason I chose this: people can choose their own key and its simple to code
+function code(plain, key) {
+	var plain = prompt('enter a word/ sentence to code')
+	var key = prompt('Enter a Keyword')
+	if (plain != null && key != null ) {
+		var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.!?,:;'/ ";
+		var final = '';
+		for (var i = 0; i < plain.length; i++) {
+			var a = alphabet.indexOf(plain.charAt(i)) //this finds the index of the character in index i of plain in alphabet variable
+			var b = alphabet.indexOf(key.charAt(i % key.length)) //this finds the index of the character in index i of key in alphabet variable
+			final += alphabet.charAt((a + b) % alphabet.length);
+		}
+		console.log(final);
 	}
-	console.log(encryptWord);
+	else {
+		alert('please do not enter a null value');
+	}
 }
 
-function decode(word, keyword) {
-	var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.!?,:;'/ ";
-	var decryptWord = "";
-	for (var i = 0; i < word.length; i++) {
-		decryptWord += alphabet.charAt(((alphabet.indexOf(word.charAt(i)) + alphabet.length) - alphabet.indexOf(keyword.charAt(i % keyword.length))) % alphabet.length);
+function decode(plain, key) {
+	var plain = prompt('Enter the coded message')
+	var key = prompt('What is the secret key?')
+	if (plain != null && key != null ) {
+		var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.!?,:;'/ ";
+		var initial = "";
+		for (var i = 0; i < plain.length; i++) {
+			var c = alphabet.indexOf(plain.charAt(i)) + alphabet.length
+			var d = alphabet.indexOf(key.charAt(i % key.length))
+
+			initial += alphabet.charAt((c - d) % alphabet.length);
+		}
+		console.log(initial);
 	}
-	return decryptWord;
+	else {
+		alert('please enter your key and coded message again');
+	}
 }
+
